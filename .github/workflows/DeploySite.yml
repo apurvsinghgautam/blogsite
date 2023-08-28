@@ -41,7 +41,7 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle add html proofer && gem install html-proofer && bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
+        run: bundle add html-proofer && gem install html-proofer && bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
 
